@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url(~/assets/fonts/Montserrat-VariableFont_wght.ttf) format('truetype');
+    font-weight: 400 700;
+    font-style: normal;
+}
+
+:root {
+    /* Cores */
+    --primary: #8FC93A;
+    --secondary: #E18335;
+    --tertiary: #E4CC37;
+    --quaternary: #374B57;
+    --background: #1E91D6;
+    --text: #EAEAEA;
+  
+    /* Espaçamentos */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+  
+    /*! - - - - - - Tipografia (falta ajustar os sizes) - - - - - -  */
+    --font-family: 'Montserrat, Arial, sans-serif';
+    --font-size-base: 16px;
+    --font-size-lg: 20px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+        --background: #2F3239;
+    }
+  }
