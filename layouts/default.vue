@@ -1,5 +1,27 @@
 <template>
-    <div>
+    <main>
+        <Header />
+        <h1>Gestão de Pedidos</h1>
         <slot />
-    </div>
+        <Footer />
+    </main>
 </template>
+
+<style scoped>
+main {
+    padding: var(--spacing-md);
+
+    font-family: 'Montserrat';
+}
+
+main h1 {
+    padding: var(--spacing-md) 0;
+    
+    font-weight: 700;
+    font-size: var(--font-size-lg);
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(47, 50, 57, 0.15);
+    
+    color: var(--text);
+}
+</style>
