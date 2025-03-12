@@ -48,6 +48,8 @@ const toggleTheme = () => {
         text-shadow: 0px 4px 4px rgba(47, 50, 57, 0.15);
 
         color: var(--text);
+
+        user-select: none;
     }
 
     .switch {
@@ -119,6 +121,8 @@ const toggleTheme = () => {
         font-size: var(--font-size-input);
 
         color: white;
+
+        user-select: none;
     }
 }
 </style>

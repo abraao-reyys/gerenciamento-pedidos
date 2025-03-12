@@ -4,27 +4,16 @@
         <main>
             <h1>Gestão de Pedidos</h1>
             <form action="#" method="post">
-                <div>
-                    <label for="iid">ID</label>
-                    <input type="text" name="id" id="iid" placeholder="auto" readonly> <!--Virá automaticamente como número-->
-                </div>
-                <div>
-                    <label for="idate">Data</label>
-                    <input type="text" name="date" id="idate" placeholder="dd/mm/aaaa" maxlength="10"> <!--Optado para melhor controle. Uso de RegEx para máscara de data-->
-                </div>
-                <div>
-                    <label for="iresp">Responsável</label>
-                    <input type="text" name="name" id="iresp" placeholder="Ex.: Agostinho de Hipona" maxlength="11">
-                </div>
+                <InputField label="ID" type="text" name="id" id="iid" placeholder="auto" readonly width="120px"/>
+                <InputField label="Data" type="text" name="date" id="idate" placeholder="dd/mm/aaaa" maxlength="10" width="200px" />
+                <InputField label="Responsável" type="text" name="name" id="iresp" placeholder="Ex.: Agostinho de Hipona" maxlength="11" width="346px" />
                 <div>
                     <button id="history">HISTÓRICO</button>
-                    <input type="submit" value="CRIAR" id="create">
+                    <button type="submit" id="create">CRIAR</button>
                 </div>
             </form>
-            <footer>
-                <p>@MercadinhoSaoPedro</p>
-            </footer>
-        </main>                        
+        </main>
+        <Footer />                     
     </div>
 </template>
 
@@ -122,7 +111,6 @@ main form {
             font-size: var(--font-size-base);
             
             color: var(--text);
-            background-color: var(--secondary);
             
             border: 0;
             border-radius: 10px;
@@ -130,32 +118,19 @@ main form {
             cursor: pointer;
         }
 
+        button:nth-of-type(1) {
+            background-color: var(--secondary);
+        }
+
+        button:nth-of-type(2) {
+            background-color: var(--primary);
+        }
+
         button:focus {
             box-shadow: 0 0 8px rgba(47, 50, 57, 0.6);
 
             outline: none;
         }
-
-        input {
-            width: 162px;
-            
-            font-size: var(--font-size-base);
-            
-            color: var(--text);
-            background-color: var(--primary);
-            
-            cursor: pointer;
-        }
     }
 }
-
-footer {
-    margin-top: 60px;
-
-    font-size: var(--font-size-base);
-    text-align: center;
-
-    color: var(--text);
-}
-
 </style>
