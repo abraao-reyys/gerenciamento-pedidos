@@ -17,7 +17,9 @@
     /* Espaçamentos */
     --spacing-xs: 4px;
     --spacing-sm: 8px;
+    --spacing-smd: 12px;
     --spacing-md: 20px;
+    --spacing-lg: 36px;
   
     /*! - - - - - - Tipografia (falta ajustar os sizes) - - - - - -  */
     --font-family: 'Montserrat, Arial, sans-serif';

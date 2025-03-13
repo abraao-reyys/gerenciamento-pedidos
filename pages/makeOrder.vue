@@ -1,5 +1,6 @@
 <template>
-    <p>Aqui fica a tela de pedido.</p>
+    <SelectField />
+    <QuantitySelector />
 </template>
 
 <style scoped></style>

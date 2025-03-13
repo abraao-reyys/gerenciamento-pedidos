@@ -9,6 +9,9 @@
 
 <style scoped>
 main {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
     padding: var(--spacing-md);
 
     font-family: 'Montserrat';
@@ -23,5 +26,7 @@ main h1 {
     text-shadow: 0px 4px 4px rgba(47, 50, 57, 0.15);
     
     color: var(--text);
+
+    user-select: none;
 }
 </style>
