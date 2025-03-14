@@ -1,8 +1,17 @@
-# Nuxt Minimal Starter
+# Atenção, visitante:
+O projeto, no momento, está em desenvolvimento. O README a seguir é o padrão proposto pelo Nuxt e o código tende a sofrer, posteriormente, refatorações para otimização e bom desempenho.
+
+Já adianto algo importante: esse projeto está sendo feito para auxiliar minha família em seu pequeno negócio.
+
+Sinta-se à vontade para dar sugestões, recriar da maneira que lhe achar conveniente e compartilhar essas boas ideias.
+
+Thanks!
+
+## Nuxt Minimal Starter
 
 Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
-## Setup
+### Setup
 
 Make sure to install dependencies:
 
@@ -20,7 +29,7 @@ yarn install
 bun install
 ```
 
-## Development Server
+### Development Server
 
 Start the development server on `http://localhost:3000`:
 
@@ -38,7 +47,7 @@ yarn dev
 bun run dev
 ```
 
-## Production
+### Production
 
 Build the application for production:
 
