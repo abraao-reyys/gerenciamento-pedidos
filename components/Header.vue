@@ -17,8 +17,10 @@ const toggleTheme = () => {
 </script>
 
 <template>
-    <header class="header"> <!--Definindo modo temporariamente-->
-        <h1>MSP</h1>
+    <header class="header">
+        <NuxtLink to="/">
+            <h1>MSP</h1>
+        </NuxtLink>
         <div class="theme-toggle">
             <label class="switch">
                 <input type="checkbox" v-model="isDark" @change="toggleTheme">
@@ -50,6 +52,7 @@ const toggleTheme = () => {
         color: var(--text);
 
         user-select: none;
+        cursor: pointer;
     }
 
     .switch {

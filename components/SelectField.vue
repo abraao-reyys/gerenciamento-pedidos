@@ -1,14 +1,59 @@
 <script setup>
+import { watch } from 'vue';
+import { useSelectControlStore } from '#imports';
+
+const controlStore = useSelectControlStore();
+
+function toNextOption() {
+    const productList = document.getElementById('productList');
+    const currentOption = productList.selectedIndex;
+    if (currentOption < productList.length - 1) {
+        productList.selectedIndex = currentOption + 1
+    } else {
+        productList.selectedIndex = 0;
+    }
+}
+
+function toPreviousOption() {
+    const productList = document.getElementById('productList');
+    const currentOption = productList.selectedIndex;
+    if (currentOption > 0) {
+        productList.selectedIndex = currentOption - 1
+    } else {
+        productList.selectedIndex = productList.length - 1;
+    }
+}
+
+watch(() => controlStore.triggerNext, (val) => {
+    if (val) {
+        toNextOption();
+        controlStore.resetTriggers();
+    }
+});
+
+watch(() => controlStore.triggerPrevious, (val) => {
+    if (val) {
+        toPreviousOption();
+        controlStore.resetTriggers();
+    }
+});
 </script>
 
 <template>
     <div class="select-box">
         <span class="status-flag"></span>
-        <select name="" id="" class="custom-select">
-            <option value="food">AÇÚCAR DEMERARA KG</option>
+        <select name="productList" id="productList" class="custom-select">
+            <option value="food">AÇÚCAR REFINADO</option>
+            <option value="food">AÇÚCAR DEMERARA</option>
             <option value="food">FEIJÃO</option>
-            <option value="food">ARROZ NAMORADO KG</option>
             <option value="food">CAFÉ MARATÁ 250G</option>
+            <option value="food">CAFÉ MARATÁ 500G</option>
+            <option value="food">CAFÉ SANTA CLARA 250G</option>
+            <option value="food">CAFÉ SANTA CLARA 250G</option>
+            <option value="food">ARROZ URBANO KG</option>
+            <option value="food">ARROZ URBANO 5KG</option>
+            <option value="food">ARROZ TIO URBANO KG</option>
+            <option value="food">ARROZ TIO URBANO 5KG</option>
         </select>
     </div>
 </template>
